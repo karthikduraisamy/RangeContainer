@@ -14,10 +14,10 @@ public class TreapRangeContainer implements RangeContainer {
     // (4) serves the heap minimum when Ids.nextId() is called and then adds node's children to heap
     // (5) if no new node can be added (because it's not in the range) then return -1
     //
-    // (1) space: allocates only a heap as extra memory (produces O(k) garbage per query where k is result size)
-    // (2) time: does not require sorting so skips upfront k.log(k) required for sorting,
-    //           still requires k.log(k) for lazily inserting k elements into min heap
-    // (3) worst case: O(N + N.log(N)) time + O(N) space
+    // space: allocates only a heap as extra memory (produces O(k) garbage per query where k is result size)
+    // time: does not require sorting so skips upfront k.log(k) required for sorting,
+    //       still requires k.log(k) for lazily inserting k elements into min heap
+    // worst case: O(N.log(N)) time + O(N) space
 
     private Treap treap;
 

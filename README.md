@@ -14,6 +14,6 @@ To query a range:
 ## Analysis
 * **Space**: allocates only a heap as extra memory (produces O(k) garbage per query where k is result size)
 * **Time**: does not require sorting so skips upfront k.log(k) required for sorting, still requires k.log(k) for lazily inserting k elements into min heap
-* **Worst Case**: O(N + N.log(N)) time + O(N) space
+* **Worst Case**: O(N.log(N)) time + O(N) space
 
 Also includes, `TreeSet` and Array based implementations for the sake of comparison. The Array implementation produces less garbage than the `TreeSet` implementation however is not as efficient as the `Treap` implementation.
